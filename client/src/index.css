@@ -1,0 +1,257 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+button {
+cursor: pointer;
+}
+
+main {
+width: 100%;
+height: 100%;
+background-image: url("../public/luke-chesser-3rWagdKBF7U-unsplash.jpg");
+background-size: 100% 100%;
+} 
+
+header {
+display: flex;
+flex-direction: row;
+width: 100%;
+height: 5%;
+/*height: 35px;*/
+text-align: center;
+top: 0;
+background-color: #008B8B;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  
+  overflow-y: auto;
+}
+
+.header_classes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+position: fixed;
+top: 0;
+width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+padding-top: 102px;
+}
+
+.menu {
+  z-index: 999999;
+  display: inline-block;
+  position: relative;
+}
+
+.menu > button {
+  z-index: 999999;
+  color: white;
+  position: relative;
+  order: 1;
+  width: 80px;
+  height: 100%;
+  font-size: 20px;
+  background-color: #008B8B;
+  border: none;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 999999;
+  width: 80px;
+  background-color: #008B8B;
+  text-align: left;
+}
+
+.dropdown > ul {
+  margin-block-start: 0em;
+  padding-inline-start: 15px;
+}
+
+.dropdown >ul >li {
+  list-style: none;
+}
+
+.menu > button:hover {
+  /* background-color: #9370DB; */
+  opacity: 0.6;
+}
+
+.entrance > button:hover {
+/* background-color: #9370DB; */
+opacity: 0.6;
+}
+
+.title:hover {
+opacity: 0.6;
+}
+
+.title {
+  order: 2;
+  height: 100%;
+  font-size: 35px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.title > a {
+  color: white;
+  text-decoration: none;
+}
+
+.entrance {
+  order: 3;
+  height: 100%;
+  width: 50px;
+}
+
+.entrance > button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #008B8B;
+}
+
+.entrance > button > img {
+  width: 20px;
+  height: 20px;
+}
+
+.show {
+  display: block;
+}
+
+.card {
+  background: white;
+  position: relative;
+  z-index: 1;
+  margin-left: 10px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  width: 150px;
+  height: 220px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+.card > img {
+position: inherit;
+/* z-index: -1; */
+margin-top: 5px;
+}
+
+.card:hover {
+  z-index: 1;
+  transform: translateY(3px);
+  box-shadow: 0px 0px -10px 5px rgba(0, 0, 0, 0.25);
+  /*box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.6);*/
+}
+
+
+.productName {
+  display: block;
+  width: 150px;
+  text-align: center;
+  width: 90%;
+}
+
+.productName > a {
+  font-size: 12px;
+}
+
+/*---Anastasya---*/
+a{
+  color: black;
+  text-decoration: none;
+}
+.productName >a:hover{
+  color: red;
+}
+.productName >a:active{
+  color: red;
+}
+
+.lenovo_notebook_1{
+  width: 100px;
+  /*left: 100px;*/
+  top: 0px;
+}
+
+.buyButton{
+  background: orange;
+  width:80px;
+}
+
+.rating-area {
+overflow: hidden;
+align-self: baseline;
+margin-left: 30px;
+}
+.rating-area:not(:checked) > input {
+display: none;
+}
+.rating-area:not(:checked) > label {
+float: right;
+width: 10px;
+padding: 0;
+cursor: pointer;
+font-size: 10px;
+line-height: 32px;
+color: lightgrey;
+text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+content: '★';
+}
+.rating-area > input:checked ~ label {
+color: gold;
+text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+color: gold;
+text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+position: relative;
+}
+

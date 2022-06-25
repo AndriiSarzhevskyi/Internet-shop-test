@@ -1,0 +1,4 @@
+{
+    "port": 5000,
+    "mongoUri": "mongodb+srv://Andrii:X7QOmTJqlEUwg4GA@cluster0.ogke8.mongodb.net/Internet-shop?retryWrites=true&w=majority"
+}
