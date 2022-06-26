@@ -9,7 +9,7 @@ export const useHttp = () => {
     try {
       if (body) {
         body = JSON.stringify(body)
-        // headers['Content-Type'] = 'application/json'
+
       }
 
       const response = await fetch(url, {method, body})
@@ -22,7 +22,7 @@ export const useHttp = () => {
 
       setLoading(false)
 
-      return data
+      return data;
     } catch (e) {
       setLoading(false)
       setError(e.message)
