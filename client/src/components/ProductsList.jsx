@@ -3,7 +3,7 @@ export const ProductsList = ({ product }) => {
       <>
 
         <div class = "card" key = {product._id}>
-                <img class="lenovo_notebook_1" key = {product._id} src={product.image} title="Ноутбук LENOVO IdeaPad 3 14ITL6 Arctic Grey (82H700HLRA)" />
+                <img class="item_img" key = {product._id} src={`data:image/jpeg;base64,${product.image}`} title="Ноутбук LENOVO IdeaPad 3 14ITL6 Arctic Grey (82H700HLRA)" />
                 <div class = "productName">
                     <a href="lenovo_notebook_1.html" title="Ноутбук LENOVO IdeaPad 3 14ITL6 Arctic Grey (82H700HLRA)"> {product.name}</a>
                 </div>
@@ -26,7 +26,10 @@ export const ProductsList = ({ product }) => {
                   <span></span>    
                   <span></span>
                 </div>
-                <button class="buyButton" id="buy"> КУПИТЬ </button>
+                <div class = "buy_field">
+                  <div class = "price">  {product.price} &#8372;</div>
+                  <button class="buyButton" id="buy"> КУПИТЬ </button>
+                </div>
             </div>
 
       </>

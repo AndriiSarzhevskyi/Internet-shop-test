@@ -20,7 +20,7 @@ export const Products = () => {
   }, []);
 
   return (
-    <div>
+    <div class = "list">
       
       {products.map((product)=> {
         return <ProductsList key={product._id} product={product}></ProductsList>
